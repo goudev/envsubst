@@ -1,6 +1,6 @@
 # Plugin Substituidor de variáveis para Drone CI
 
-[![Build Status](https://cloud.drone.io/api/badges/gou-dev/semantic-release/status.svg)](https://cloud.drone.io/gou-dev/semantic-release)
+[![Build Status](https://cloud.drone.io/api/badges/plugindrone/envsubst/status.svg)](https://cloud.drone.io/plugindrone/envsubst)
 
 Este plugin para o Drone, permite que você realize a substituição de variaveis em arquivos. 
 A substituição é realizada com base nas variaveis populadas até o momento do step. 

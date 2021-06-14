@@ -29,5 +29,5 @@ docker run --rm \
   -e PLUGIN_FILE="caminho-relativo-do-arquivo" \
   -v $(pwd):$(pwd) \
   -w $(pwd) \
-  goudev/envsubst
+  plugindrone/envsubst
 ```

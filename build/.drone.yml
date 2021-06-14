@@ -6,6 +6,25 @@ platform:
   
 steps:
 
+- name: docker-publish-beta
+  image: plugins/docker
+  settings:
+    username:
+      from_secret: registry_username
+    password:
+      from_secret: registry_password
+    repo: plugindrone/envsubst
+    dockerfile: build/Dockerfile.amd64
+    tags:
+      - "amd64-b${DRONE_BUILD_NUMBER}-beta"
+      - "amd64-beta"
+  when:
+    ref:
+      include:
+      - "refs/heads/dev"
+    event:
+    - push
+
 - name: docker-publish
   image: plugins/docker
   settings:

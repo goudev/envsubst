@@ -24,7 +24,7 @@ steps:
       - "refs/heads/dev"
     event:
     - push
----
+
 - name: docker-publish
   image: plugins/docker
   settings:

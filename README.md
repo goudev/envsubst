@@ -24,7 +24,7 @@ O entrypoint utiliza uma expressão através do comando sed para separar esses a
 
 ## Executando o plugin manualmente
 
-```
+```shell
 docker run --rm \
   -e PLUGIN_FILE="caminho-relativo-do-arquivo" \
   -v $(pwd):$(pwd) \

@@ -1,0 +1,28 @@
+kind: pipeline
+name: plugindrone/envsubst
+
+platform:
+  arch: amd64
+  
+steps:
+
+- name: docker-publish
+  image: plugins/docker
+  settings:
+    username:
+      from_secret: registry_username
+    password:
+      from_secret: registry_password
+    repo: plugindrone/envsubst
+    dockerfile: build/Dockerfile.amd64
+    tags:
+      - "amd64-b${DRONE_BUILD_NUMBER}"
+      - "amd64"
+      - "latest"
+  when:
+    ref:
+      include:
+      - "refs/heads/master"
+      - "refs/heads/release/v*"
+    event:
+    - push
